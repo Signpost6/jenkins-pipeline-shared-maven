@@ -15,7 +15,7 @@ def call(body) {
         body()
     }
 
-    File f = new File("pom.xml")
+    File f = new File("${env.workspace}/pom.xml")
     println("File - " + f.getAbsolutePath())
 
 }
