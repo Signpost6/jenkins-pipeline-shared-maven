@@ -1,5 +1,3 @@
-@Library('jenkins-pipeline-shared-maven@master')
-
 /**
  * Determines the current maven version of the project
  *
