@@ -15,7 +15,7 @@ def call(body) {
         body()
     }
 
-    File f = new File()
+    File f = new File("pom.xml")
     println("File - " + f)
 
 }
