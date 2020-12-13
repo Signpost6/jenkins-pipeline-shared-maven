@@ -16,6 +16,6 @@ def call(body) {
     }
 
     File f = new File("pom.xml")
-    println("File - " + f)
+    println("File - " + f.getAbsolutePath())
 
 }
