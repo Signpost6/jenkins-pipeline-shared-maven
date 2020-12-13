@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 /**
  * Determines the current maven version of the project
  *
@@ -16,6 +18,9 @@ def call(body) {
     }
 
     File f = new File("${env.workspace}/pom.xml")
-    println("File - " + f.getAbsolutePath())
+    def jsonSlurper = new JsonSlurper()
+    def pom = jsonSlurper.parse(f)
+
+    println("Version = " + pom.project.version)
 
 }
